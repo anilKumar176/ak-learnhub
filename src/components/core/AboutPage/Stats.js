@@ -3,10 +3,10 @@ import React from "react";
 const StatsComponent = () => {
 
     const Stats = [
-        {count : "5K", label : "Active Students"},
+        {count : "1K", label : "Active Students"},
         {count : "10+", label : "Mentors"},
-        {count : "100+", label : "Courses"},
-        {count : "50+", label : "Awards"},
+        {count : "50+", label : "Courses"},
+        {count : "15+", label : "Awards"},
     ]
 
     return(

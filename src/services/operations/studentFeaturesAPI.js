@@ -75,11 +75,11 @@ export async function buyCourse(token, courses, userDetails, navigate, dispatch)
 
 
         const options = {
-            key : "rzp_test_thfWhdIHqzqIGv" ,
+            key : "rzp_test_R5ZiFoQG9WdgJt" ,
             currency : orderResponse.data.message.currency,
             amount : `${orderResponse.data.message.amount}`,
             order_id : orderResponse.data.message.id ,
-            name:"StudyNotion",
+            name:"LearnHub",
             description: "Thank you for purchasing course",
             image : rzpLogo,
             prefill: {

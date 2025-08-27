@@ -23,7 +23,7 @@ const About = () => {
                     <header className="text-center text-4xl w-[70%] mx-auto font-bold">
                         Driving Innovation in Online Education for a <HighlightText text={"Brighter Future"} />
                     </header>
-                    <p className="text-lg text-center w-[70%] mx-auto mt-3 text-richblack-200">Studynotion is at the forefront of driving innovation in online education. We're passionate about creating a brighter future by offering cutting-edge courses, leveraging emerging technologies, and nurturing a vibrant learning community.</p>
+                    <p className="text-lg text-center w-[70%] mx-auto mt-3 text-richblack-200">LearnHub is at the forefront of driving innovation in online education. We're passionate about creating a brighter future by offering cutting-edge courses, leveraging emerging technologies, and nurturing a vibrant learning community.</p>
 
                     <div className="flex flex-col w-[50%] md:w-full  md:flex-row mt-14 gap-6 mx-auto">
                         <img src={BannerImage1} alt="" />
