@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import logo from "../../assets/Logo/learnhub.png";
+import logo from "../../assets/Logo/Logo-Full-Light.png";
 import { Link, matchPath, useLocation } from "react-router-dom";
 import { NavbarLinks } from "../../data/navbar-links";
 import { useSelector } from "react-redux";
@@ -49,17 +49,16 @@ const Navbar = () => {
       <div className="flex  w-11/12 max-w-maxContent items-center justify-between ">
         {/* logo */}
         <Link to="/">
-          <img className="w-[100px] h-[50px] m-10px p-10px right-10 top-1
-          " src={logo} alt="" />
+          <img className="w-[100px] md:w-full" src={logo} alt="" />
         </Link>
 
         {/* nav links */}
         <nav className="hidden md:block ">
-          <ul className="flex gap-x-4 text-richblack-25">
+          <ul className="flex gap-x-6 text-richblack-25">
             {NavbarLinks.map((link, index) => {
               return (
                 <>
-                  {link.title !== "Catalog" && (
+                    {link.title !== "Catalog" && (
                     <Link to={link?.path}>
                       <p
                         className={`${
@@ -80,17 +79,14 @@ const Navbar = () => {
 
         {/* more items for mobile device */}
         <div className="visible  md:hidden">
-          <NavbarDarkExample />
+            <NavbarDarkExample/>
         </div>
 
         {/* catalog btn */}
         <div className="text-white  visible ">
+          
           <Dropdown>
-            <Dropdown.Toggle
-              className="p-2"
-              variant="success"
-              id="dropdown-basic"
-            >
+            <Dropdown.Toggle className="p-2" variant="success" id="dropdown-basic">
               Catalog
             </Dropdown.Toggle>
 
@@ -98,37 +94,34 @@ const Navbar = () => {
               {/* <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
               <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
               <Dropdown.Item href="#/action-3">Something else</Dropdown.Item> */}
-              {subLinks.length ? (
-                subLinks.map((subLink, index) => {
-                  return (
-                    //   <Link
-                    //     className="text-black p-2 hover:bg-richblack-500 transition-all duration-200 "
-                    //     to={`/catalog/${subLink.name
-                    //       .split(" ")
-                    //       .join("-")
-                    //       .toLowerCase()}`}
-                    //     key={index}
-                    //   >
-                    //     <p>{subLink?.name}</p>
-                    //   </Link>
-                    <Dropdown.Item
-                      href={`/catalog/${subLink.name
-                        .split(" ")
-                        .join("-")
-                        .toLowerCase()}`}
-                    >
-                      {subLink?.name}
-                    </Dropdown.Item>
-                  );
-                })
-              ) : (
-                <p className="text-black p-2 border-richblack-900 rounded-md border-[1px] ">
-                  Nothing found
-                </p>
-              )}
+                    {
+                        subLinks.length ? (
+                          subLinks.map((subLink, index) => {
+                            return (
+                            //   <Link
+                            //     className="text-black p-2 hover:bg-richblack-500 transition-all duration-200 "
+                            //     to={`/catalog/${subLink.name
+                            //       .split(" ")
+                            //       .join("-")
+                            //       .toLowerCase()}`}
+                            //     key={index}
+                            //   >
+                            //     <p>{subLink?.name}</p>
+                            //   </Link>
+                            <Dropdown.Item  href={`/catalog/${subLink.name.split(" ").join("-").toLowerCase()}`}>{subLink?.name}</Dropdown.Item>
+                            );
+                          })
+                        ) : (
+                          <p className="text-black p-2 border-richblack-900 rounded-md border-[1px] ">
+                            Nothing found
+                          </p>
+                        )
+                    }
             </Dropdown.Menu>
           </Dropdown>
         </div>
+
+
 
         {/* login signup dashboard */}
         <div className="flex gap-x-4 items-center">
