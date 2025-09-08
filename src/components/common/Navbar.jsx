@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import logo from "../../assets/Logo/Logo-Full-Light.png";
+import logo from "../../assets/Logo/learnhub.png";
 import { Link, matchPath, useLocation } from "react-router-dom";
 import { NavbarLinks } from "../../data/navbar-links";
 import { useSelector } from "react-redux";
@@ -49,7 +49,8 @@ const Navbar = () => {
       <div className="flex  w-11/12 max-w-maxContent items-center justify-between ">
         {/* logo */}
         <Link to="/">
-          <img className="w-[100px] md:w-full" src={logo} alt="" />
+          <img className="w-18 h-12 md:w-24 " src={logo} alt="Logo" />
+
         </Link>
 
         {/* nav links */}
