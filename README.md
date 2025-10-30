@@ -10,7 +10,7 @@ JWT_SECRET = <jwt_name>
 FOLDER_NAME =<folder_name>
 
 RAZORPAY_KEY = rzp_test_vmknA7eGb9xl0s
-RAZORPAY_SECRET = iF6VX9N2kaAM6JNEBh0djEPt
+RAZORPAY_SECRET = <key >
 
 CLOUD_NAME =<cloud_name>
 API_KEY =<cloudinary_api_key>
