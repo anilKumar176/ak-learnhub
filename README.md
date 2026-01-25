@@ -1,4 +1,4 @@
-.env
+.env file
 MONGODB_URL = "mongo_url"
 PORT = 4000 
 
